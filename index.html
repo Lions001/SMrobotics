@@ -3,79 +3,31 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Spark-A-Story</title>
+  <title>St. Mark's FTC Robotics</title>
   <style>
     body {
-      margin: 0;
+      margin:0;
       font-family: Arial, sans-serif;
-      background: linear-gradient(135deg, #003366, #FFD700);
-      color: #222;
+      color:#222;
+      background: linear-gradient(135deg,#001a66,#004aad,#ffd700,#ffea70);
+      background-size:400% 400%;
+      animation: bgmove 12s ease infinite;
+      overflow-x:hidden;
     }
 
-    header {
-      background-color: rgba(0, 0, 0, 0.6);
-      color: white;
-      padding: 1rem;
-      text-align: center;
+    @keyframes bgmove {
+      0% {background-position:0% 50%;}
+      50% {background-position:100% 50%;}
+      100% {background-position:0% 50%;}
     }
 
-    h1 {
-      margin: 0.5rem 0;
-    }
-
-    main {
-      max-width: 900px;
-      margin: 2rem auto;
-      padding: 1rem;
-    }
-
-    .box {
-      background: white;
-      border: 1px solid #ccc;
-      padding: 1rem 1.5rem;
-      margin-bottom: 1.5rem;
-      border-radius: 4px;
-    }
-
-    h2 {
-      margin-top: 0;
-      color: #003366;
-    }
-
-    footer {
-      text-align: center;
-      padding: 1rem;
-      background: rgba(0, 0, 0, 0.6);
-      color: white;
-      margin-top: 2rem;
-    }
-  </style>
-</head>
-<body>
-  <header>
-    <h1>Spark-A-Story</h1>
-    <p>Helping kids share their stories with the world</p>
-  </header>
-
-  <main>
-    <div class="box">
-      <h2>About Us</h2>
-      <p>Spark-A-Story is a nonprofit dedicated to empowering young writers. We provide workshops, mentorship, and resources to help kids bring their ideas to life and share them with the world.</p>
-    </div>
-
-    <div class="box">
-      <h2>Programs</h2>
-      <p>We host writing workshops at local libraries, run online events, and create opportunities for kids to publish and showcase their work.</p>
-    </div>
-
-    <div class="box">
-      <h2>Get Involved</h2>
-      <p>Want to help? You can volunteer as a mentor, donate to support our workshops, or spread the word about Spark-A-Story.</p>
-    </div>
-  </main>
-
-  <footer>
-    <p>&copy; 2025 Spark-A-Story. All rights reserved.</p>
-  </footer>
-</body>
-</html>
+    nav {
+      position:fixed;
+      top:0;
+      width:100%;
+      background:rgba(0,26,102,0.9);
+      color:#fff;
+      display:flex;
+      justify-content:space-between;
+      align-items:center;
+      padding:12px 25
