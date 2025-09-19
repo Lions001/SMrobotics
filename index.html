@@ -5,145 +5,81 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>St. Mark's FTC Robotics</title>
   <style>
-    /* ====== Colors ====== */
-    :root {
-      --blue: #001a66;
-      --blue-light: #004aad;
-      --gold: #ffd700;
-      --gold-bright: #ffea70;
-      --dark-gray: #222;
-    }
-
     body {
       margin: 0;
       font-family: Arial, sans-serif;
-      color: var(--dark-gray);
-      /* Bolder animated gradient background */
-      background: linear-gradient(135deg, var(--blue), var(--blue-light), var(--gold), var(--gold-bright));
-      background-size: 400% 400%;
-      animation: gradientMove 10s ease infinite;
-      position: relative;
-      overflow-x: hidden;
+      background: linear-gradient(to bottom right, #001a66, #ffd700);
+      color: #222;
     }
 
-    @keyframes gradientMove {
-      0% { background-position: 0% 50%; }
-      50% { background-position: 100% 50%; }
-      100% { background-position: 0% 50%; }
-    }
-
-    /* ====== Gold shimmer overlay ====== */
-    body::before {
-      content: "";
-      position: fixed;
-      top: 0;
-      left: 0;
-      width: 200%;
-      height: 200%;
-      background: linear-gradient(
-        120deg,
-        transparent 0%,
-        rgba(255, 255, 255, 0.3) 20%,
-        transparent 40%,
-        transparent 60%,
-        rgba(255, 255, 255, 0.3) 80%,
-        transparent 100%
-      );
-      animation: shimmer 6s linear infinite;
-      pointer-events: none;
-      z-index: 0;
-    }
-
-    @keyframes shimmer {
-      0% { transform: translateX(-50%) translateY(-50%); }
-      100% { transform: translateX(50%) translateY(50%); }
-    }
-
-    /* ====== Navbar ====== */
     nav {
       position: fixed;
       top: 0;
       width: 100%;
-      background: rgba(0, 26, 102, 0.9); /* semi-transparent blue */
-      backdrop-filter: blur(6px);
+      background: #001a66;
       color: white;
       display: flex;
       justify-content: space-between;
       align-items: center;
-      padding: 10px 30px;
+      padding: 10px 25px;
+      box-shadow: 0 2px 6px rgba(0,0,0,0.3);
       z-index: 1000;
-      box-shadow: 0 2px 10px rgba(0,0,0,0.4);
     }
 
     nav a {
       color: white;
-      margin: 0 15px;
       text-decoration: none;
+      margin: 0 12px;
       font-weight: bold;
-      transition: color 0.3s ease, text-shadow 0.3s ease;
     }
 
     nav a:hover {
-      color: var(--gold-bright);
-      text-shadow: 0 0 8px var(--gold);
+      color: #ffd700;
     }
 
-    /* ====== Hero Section ====== */
     .hero {
       height: 100vh;
-      background: linear-gradient(rgba(0,0,0,0.6), rgba(0,0,0,0.6)),
-                  url("lion-banner.jpg") center/cover no-repeat;
+      background: rgba(0,0,0,0.5) url("lion-banner.jpg") center/cover no-repeat;
       color: white;
       display: flex;
       flex-direction: column;
       justify-content: center;
       align-items: center;
       text-align: center;
-      z-index: 1;
-      position: relative;
+      padding: 20px;
     }
 
     .hero h1 {
-      font-size: 3.5rem;
-      color: var(--gold);
-      text-shadow: 0 0 20px rgba(255, 215, 0, 0.9);
+      font-size: 3rem;
+      color: #ffd700;
     }
 
     .hero p {
-      font-size: 1.3rem;
-      text-shadow: 0 0 10px rgba(0,0,0,0.7);
+      font-size: 1.2rem;
     }
 
     .section {
-      padding: 80px 20px;
-      text-align: center;
-      background: rgba(255, 255, 255, 0.85);
+      padding: 60px 20px;
+      max-width: 900px;
       margin: 40px auto;
-      border-radius: 15px;
-      max-width: 1000px;
-      box-shadow: 0 8px 20px rgba(0,0,0,0.25);
-      position: relative;
-      z-index: 1;
+      background: rgba(255,255,255,0.9);
+      border-radius: 10px;
     }
 
     .section h2 {
-      color: var(--blue);
-      margin-bottom: 20px;
+      color: #001a66;
+      margin-bottom: 15px;
     }
 
-    /* ====== Footer ====== */
     footer {
-      background: var(--blue);
+      background: #001a66;
       color: white;
       text-align: center;
-      padding: 20px;
-      z-index: 1;
-      position: relative;
+      padding: 15px;
     }
   </style>
 </head>
 <body>
-  <!-- Navbar -->
   <nav>
     <div class="logo">🦁 FTC Robotics</div>
     <div>
@@ -157,21 +93,18 @@
     </div>
   </nav>
 
-  <!-- Hero Section -->
   <section class="hero">
     <h1>St. Mark's FTC Robotics</h1>
     <p>Also known as the Underage Drivers</p>
     <p><em>#27117</em></p>
   </section>
 
-  <!-- About -->
   <section id="about" class="section">
     <h2>About Us</h2>
-    <p>Welcome to the SM FTC Robotics JV team! We are a group of passionate students dedicated to the principles of STEM through the exciting world of robotics. Our team is committed to learning, building, and competing in the FIRST Tech Challenge. Join us on our journey to innovate and inspire! </p>
-    <p>Our Goal is to win the INSPIRE award for the second year in a row and advance to Worlds!</p>
+    <p>Welcome to the SM FTC Robotics JV team! We are a group of passionate students dedicated to the principles of STEM through the exciting world of robotics. Our team is committed to learning, building, and competing in the FIRST Tech Challenge. Join us on our journey to innovate and inspire!</p>
+    <p>Our goal is to win the INSPIRE award for the second year in a row and advance to Worlds!</p>
   </section>
 
-  <!-- Team -->
   <section id="team" class="section">
     <h2>Meet the Team</h2>
     <p>Coaches: Ronen Verma, Mr. Mayer, Mr. Fine</p>
@@ -179,38 +112,32 @@
     <p>Software: Ritam Setu (head), Elliot Harder, Dhilan Saluja, Ayden Yang</p>
   </section>
 
-  <!-- Robots -->
   <section id="robots" class="section">
     <h2>Our Robots</h2>
     <p>In progress</p>
   </section>
 
-  <!-- Competitions -->
   <section id="competitions" class="section">
     <h2>Competitions & Achievements</h2>
-    <p>In Progress</p>
+    <p>In progress</p>
   </section>
 
-  <!-- Outreach -->
   <section id="outreach" class="section">
     <h2>Community Outreach</h2>
     <p>In progress</p>
   </section>
 
-  <!-- Media -->
   <section id="media" class="section">
     <h2>Media Gallery</h2>
     <p>In progress</p>
   </section>
 
-  <!-- Contact -->
   <section id="contact" class="section">
     <h2>Contact Us</h2>
     <p>Email: 26vermar@smtexas.org</p>
     <p>Location: St. Mark's School of Texas</p>
   </section>
 
-  <!-- Footer -->
   <footer>
     <p>© 2025 St. Mark's School of Texas FTC Robotics</p>
   </footer>
