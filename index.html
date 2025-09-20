@@ -6,28 +6,140 @@
   <title>St. Mark's FTC Robotics</title>
   <style>
     body {
-      margin:0;
+      margin: 0;
       font-family: Arial, sans-serif;
-      color:#222;
-      background: linear-gradient(135deg,#001a66,#004aad,#ffd700,#ffea70);
-      background-size:400% 400%;
-      animation: bgmove 12s ease infinite;
-      overflow-x:hidden;
-    }
-
-    @keyframes bgmove {
-      0% {background-position:0% 50%;}
-      50% {background-position:100% 50%;}
-      100% {background-position:0% 50%;}
+      background: linear-gradient(to bottom right, #001a66, #ffd700);
+      color: #222;
     }
 
     nav {
-      position:fixed;
-      top:0;
-      width:100%;
-      background:rgba(0,26,102,0.9);
-      color:#fff;
-      display:flex;
-      justify-content:space-between;
-      align-items:center;
-      padding:12px 25
+      position: fixed;
+      top: 0;
+      width: 100%;
+      background: #001a66;
+      color: white;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 10px 25px;
+      box-shadow: 0 2px 6px rgba(0,0,0,0.3);
+      z-index: 1000;
+    }
+
+    nav a {
+      color: white;
+      text-decoration: none;
+      margin: 0 12px;
+      font-weight: bold;
+    }
+
+    nav a:hover {
+      color: #ffd700;
+    }
+
+    .hero {
+      height: 100vh;
+      background: rgba(0,0,0,0.5) url("lion-banner.jpg") center/cover no-repeat;
+      color: white;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      text-align: center;
+      padding: 20px;
+    }
+
+    .hero h1 {
+      font-size: 3rem;
+      color: #ffd700;
+    }
+
+    .hero p {
+      font-size: 1.2rem;
+    }
+
+    .section {
+      padding: 60px 20px;
+      max-width: 900px;
+      margin: 40px auto;
+      background: rgba(255,255,255,0.9);
+      border-radius: 10px;
+    }
+
+    .section h2 {
+      color: #001a66;
+      margin-bottom: 15px;
+    }
+
+    footer {
+      background: #001a66;
+      color: white;
+      text-align: center;
+      padding: 15px;
+    }
+  </style>
+</head>
+<body>
+  <nav>
+    <div class="logo">🦁 FTC Robotics</div>
+    <div>
+      <a href="#about">About</a>
+      <a href="#team">Team</a>
+      <a href="#robots">Robots</a>
+      <a href="#competitions">Competitions</a>
+      <a href="#outreach">Outreach</a>
+      <a href="#media">Media</a>
+      <a href="#contact">Contact</a>
+    </div>
+  </nav>
+
+  <section class="hero">
+    <h1>St. Mark's FTC Robotics</h1>
+    <p>Also known as the Underage Drivers</p>
+    <p><em>#27117</em></p>
+  </section>
+
+  <section id="about" class="section">
+    <h2>About Us</h2>
+    <p>Welcome to the SM FTC Robotics JV team! We are a group of passionate students dedicated to the principles of STEM through the exciting world of robotics. Our team is committed to learning, building, and competing in the FIRST Tech Challenge. Join us on our journey to innovate and inspire!</p>
+    <p>Our goal is to win the INSPIRE award for the second year in a row and advance to Worlds!</p>
+  </section>
+
+  <section id="team" class="section">
+    <h2>Meet the Team</h2>
+    <p>Coaches: Ronen Verma, Mr. Mayer, Mr. Fine</p>
+    <p>Hardware: Zachary Liaw (head), Andre Hamghalam (head), Aum Karra, Andrew Langford, Corbin Reed, Asher Saluja, Eason Lu, Eugene Maimbo, Kai Sheng</p>
+    <p>Software: Ritam Setu (head), Elliot Harder, Dhilan Saluja, Ayden Yang</p>
+  </section>
+
+  <section id="robots" class="section">
+    <h2>Our Robots</h2>
+    <p>In progress</p>
+  </section>
+
+  <section id="competitions" class="section">
+    <h2>Competitions & Achievements</h2>
+    <p>In progress</p>
+  </section>
+
+  <section id="outreach" class="section">
+    <h2>Community Outreach</h2>
+    <p>In progress</p>
+  </section>
+
+  <section id="media" class="section">
+    <h2>Media Gallery</h2>
+    <p>In progress</p>
+  </section>
+
+  <section id="contact" class="section">
+    <h2>Contact Us</h2>
+    <p>Email: 26vermar@smtexas.org</p>
+    <p>Location: St. Mark's School of Texas</p>
+  </section>
+
+  <footer>
+    <p>© 2025 St. Mark's School of Texas FTC Robotics</p>
+  </footer>
+</body>
+</html>
